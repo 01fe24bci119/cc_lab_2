@@ -105,7 +105,6 @@ Raw configuration logs are archived in `docs/cpu-info.txt`, `docs/memory-info.tx
 
 The comparative benchmark architecture establishes equivalent hardware boundaries across both execution paradigms:
 
-![Architecture Diagram](docs/architecture.png)
 
 ```text
                                 HOST SYSTEM
@@ -498,7 +497,7 @@ The container CPU benchmark demonstrated a **$3.08\times$ lower standard deviati
 
 ---
 
-## Discussion
+## Observations
 
 1. **CPU Efficiency**: Containers outperformed VMs by **+7.74%** in raw CPU operations per second. Because Docker processes run directly as native tasks on the host kernel, they eliminate the hypervisor trap-and-emulate penalties and context switching present in VMware.
 2. **API Throughput**: In the real-world FastAPI microservice test, Docker handled **+37.12% higher requests/second** with **27.07% lower latency**. This directly confirms that for web microservices and stateless APIs, containerization offers vastly superior I/O dispatch efficiency.
