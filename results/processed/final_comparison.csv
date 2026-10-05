@@ -1,11 +1,11 @@
 Metric,VM,Container,Difference
-CPU Performance,,,
-Memory Performance,,,
-Sequential Read,,,
-Sequential Write,,,
-Random Read,,,
-Random Write,,,
-Network Throughput,,,
-Startup Time,,,
-API Requests/sec,,,
-API Latency,,,
+CPU Performance,3731.72 events/sec,4020.61 events/sec,+7.74%
+Memory Performance,42692.74 MiB/sec,29520.90 MiB/sec,-30.85%
+Sequential Read,887.00 MiB/s,811.00 MiB/s,-8.57%
+Sequential Write,1178.00 MiB/s,851.00 MiB/s,-27.76%
+Random Read,20.70 MiB/s,18.20 MiB/s,-12.08%
+Random Write,18.30 MiB/s,21.20 MiB/s,+15.85%
+Network Throughput,2.73 Gbits/sec,2.19 Gbits/sec,-19.78%
+Startup Time,405 ms,363 ms,-10.37%
+API Requests/sec,800.05 req/sec,1097.05 req/sec,+37.12%
+API Latency,124.99 ms,91.15 ms,-27.07%
