@@ -22,7 +22,7 @@ An empirical study comparing execution overhead, resource efficiency, latency, a
 - [Results & Comparison Table](#results--comparison-table)
 - [Statistical Analysis](#statistical-analysis)
 - [VM vs Container Comparison](#vm-vs-container-comparison)
-- [Discussion](#discussion)
+- [Observation](#Observation)
 - [Limitations](#limitations)
 - [Conclusion](#conclusion)
 - [Reproduction Instructions](#reproduction-instructions)
