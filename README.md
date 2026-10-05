@@ -7,7 +7,6 @@ An empirical study comparing execution overhead, resource efficiency, latency, a
 ## Table of Contents
 - [Abstract](#abstract)
 - [Objectives](#objectives)
-- [Research Questions](#research-questions)
 - [Experimental Environment](#experimental-environment)
 - [Hardware Configuration](#hardware-configuration)
 - [Software Configuration](#software-configuration)
@@ -26,7 +25,6 @@ An empirical study comparing execution overhead, resource efficiency, latency, a
 - [Discussion](#discussion)
 - [Limitations](#limitations)
 - [Conclusion](#conclusion)
-- [Future Work](#future-work)
 - [Reproduction Instructions](#reproduction-instructions)
 - [Project Structure](#project-structure)
 
@@ -46,17 +44,6 @@ Virtualization is a fundamental building block of modern cloud infrastructure an
 - **Scalability Analysis**: Assess multi-threaded scaling behavior under increasing core and thread allocations (1, 2, 4, 8 threads).
 - **Startup Latency**: Quantify deployment readiness and cold-start execution times.
 - **Statistical Rigor**: Collect repeated trials across multiple runs, computing mean, median, min, max, standard deviation, and relative percentage variances.
-
----
-
-## Research Questions
-
-1. **CPU Overhead**: Does hypervisor CPU scheduling create measurable execution penalties compared to containers sharing the host Linux kernel?
-2. **Memory Subsystem**: How does guest OS memory paging and translation compare to container memory cgroup constraints?
-3. **Storage I/O**: What performance impact is introduced by virtual disk layers (VMDK) versus Docker container storage drivers and host volume mounts?
-4. **Network Throughput**: How does virtual NAT packet traversal in a VM compare with Docker bridge networking?
-5. **Real-world Application Latency**: How do synthetic benchmark conclusions translate to realistic HTTP microservice throughput and response latency?
-6. **Scalability**: Which environment scales more efficiently as concurrency and thread pressure increase beyond physical core boundaries?
 
 ---
 
@@ -536,15 +523,6 @@ This investigation provides clear empirical evidence of the architectural trade-
 - **Virtual Machines** provide **comprehensive hardware-level isolation**, independence of guest operating system kernels, and strong write buffering for traditional enterprise monoliths requiring strict security sandboxing.
 
 Neither architecture universally outperforms the other; rather, containerization optimizes efficiency and deployment agility, while virtual machines optimize isolation and architectural independence.
-
----
-
-## Future Work
-
-- **Bare-Metal Type-1 Hypervisor Testing**: Replicate benchmarks on bare-metal hypervisors (KVM / Proxmox VE / ESXi) to eliminate host OS overheads.
-- **Kubernetes Orchestration**: Benchmark container scalability across multiple nodes with Kubernetes horizontal pod autoscaling (HPA).
-- **GPU Acceleration**: Measure virtualization overhead for machine learning workloads leveraging NVIDIA container toolkit versus GPU passthrough on VMs.
-- **MicroVM Technologies**: Evaluate modern lightweight virtualization frameworks such as AWS Firecracker and Kata Containers to assess hybrid security and performance.
 
 ---
 
